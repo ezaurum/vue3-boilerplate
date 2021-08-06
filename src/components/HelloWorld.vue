@@ -37,7 +37,7 @@
 
 <script lang="ts">
 import {computed, defineComponent} from 'vue'
-import {useStore} from '/src/store';
+import {useStore} from '../store';
 
 export default defineComponent({
   name: 'HelloWorld',
