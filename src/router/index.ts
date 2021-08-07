@@ -1,11 +1,11 @@
 // Vue Router has no default export
-import * as VueRouter from "vue-router";
+import * as VueRouter from "vue-router"
 
-import routes from "./routes";
+import routes from "./routes"
 
 const router = VueRouter.createRouter({
   history: VueRouter.createWebHistory(),
   routes,
-});
+})
 
-export default router;
+export default router

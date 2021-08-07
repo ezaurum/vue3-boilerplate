@@ -1,3 +1,3 @@
-import HelloWorld from "@/components/HelloWorld.vue";
+import HelloWorld from "@/components/HelloWorld.vue"
 
-export default [{ path: "/", component: HelloWorld }];
+export default [{ path: "/", component: HelloWorld }]
