@@ -15,5 +15,7 @@ module.exports = {
     ecmaVersion: 2021,
   },
   plugins: ["prettier"],
-  rules: {},
+  rules: {
+    "prettier/prettier": "error",
+  },
 }
