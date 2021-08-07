@@ -25,7 +25,7 @@
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
   </p>
 
-  <button class="m-4 p-4" type="button" @click="increment">
+  <button class="m-4 p-4 first" type="button" @click="increment">
     count is: {{ count }}
   </button>
   <button class="m-4 p-4" type="button" @click="asyncIncrement">
@@ -66,3 +66,13 @@ export default defineComponent({
   methods: {},
 })
 </script>
+<style lang="scss" scoped>
+button {
+  color: red;
+  background: blue;
+
+  &.first {
+    background: green;
+  }
+}
+</style>
