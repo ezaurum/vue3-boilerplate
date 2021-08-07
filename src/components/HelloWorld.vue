@@ -4,8 +4,8 @@
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
     +
     <a
-      href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"
-      target="_blank"
+        href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"
+        target="_blank"
     >
       Vetur
     </a>
@@ -56,7 +56,10 @@ export default defineComponent({
     return {
       count: computed(() => store.state.count),
       // access a mutation
-      increment: () => store.commit("increment", 1),
+      increment: () =>
+
+
+          store.commit("increment", 1),
 
       // access an action
       asyncIncrement: () => store.dispatch("asyncIncrement", 1),
