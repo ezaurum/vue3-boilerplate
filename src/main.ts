@@ -1,7 +1,7 @@
 import { createApp } from "vue"
 import { key, store } from "./store"
 import router from "./router"
-import "./assets/tailwind.css"
+import "@/assets/tailwind.css"
 
 import App from "./App.vue"
 
