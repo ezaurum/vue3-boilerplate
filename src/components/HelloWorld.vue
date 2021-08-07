@@ -1,13 +1,11 @@
 <template>
-  <h1>{{ msg }}</h1>
-
   <p>
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
     +
     <a
-        href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"
-        target="_blank"
+      href="https://marketplace.visualstudio.com/items?itemName=octref.vetur"
+      target="_blank"
     >
       Vetur
     </a>
@@ -27,8 +25,12 @@
     <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
   </p>
 
-  <button class="m-4 p-4" type="button" @click="increment">count is: {{ count }}</button>
-  <button class="m-4 p-4" type="button" @click="asyncIncrement">count is: {{ count }}</button>
+  <button class="m-4 p-4" type="button" @click="increment">
+    count is: {{ count }}
+  </button>
+  <button class="m-4 p-4" type="button" @click="asyncIncrement">
+    count is: {{ count }}
+  </button>
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
@@ -36,19 +38,16 @@
 </template>
 
 <script lang="ts">
-import {computed, defineComponent} from 'vue'
-import {useStore} from '../store';
+import { computed, defineComponent } from "vue"
+import { useStore } from "../store"
 
 export default defineComponent({
-  name: 'HelloWorld',
+  name: "HelloWorld",
   props: {
     msg: {
       type: String,
-      required: true
-    }
-  },
-  methods:{
-
+      required: true,
+    },
   },
   setup: () => {
     const store = useStore()
@@ -57,10 +56,12 @@ export default defineComponent({
     return {
       count: computed(() => store.state.count),
       // access a mutation
-      increment: () => store.commit('increment', 1),
+      increment: () => store.commit("increment", 1),
 
       // access an action
-      asyncIncrement: () => store.dispatch('asyncIncrement', 1)}
-  }
+      asyncIncrement: () => store.dispatch("asyncIncrement", 1),
+    }
+  },
+  methods: {},
 })
 </script>
