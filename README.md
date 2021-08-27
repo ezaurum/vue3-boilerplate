@@ -7,3 +7,12 @@ This template should help get you started developing with Vue 3 and Typescript i
 * Lint/Prettier
 * Commit hook
 
+# 실행
+
+```bash
+yarn dev
+```
+
+```bash
+npm run dev
+```
