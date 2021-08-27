@@ -32,7 +32,7 @@
   <button class="m-4 p-4" type="button" @click="asyncIncrement">
     count is: {{ count }}
   </button>
-  <button class="m-4 p-4" type="button" @click="emitIncrement">
+  <button class="m-4 p-4 last" type="button" @click="emitIncrement">
     count is: {{ count }}
   </button>
   <p>
@@ -78,9 +78,16 @@ export default defineComponent({
 button {
   color: red;
   background: blue;
+  border: 1px solid gray;
+  text-shadow: beige 1px 1px 5px, beige -1px -1px 5px, beige 1px -1px 5px,
+    beige -1px 1px 5px;
 
   &.first {
     background: green;
+  }
+
+  &.last {
+    background: yellow;
   }
 }
 </style>
