@@ -31,6 +31,9 @@
   <button class="m-4 p-4" type="button" @click="asyncIncrement">
     count is: {{ count }}
   </button>
+  <button class="m-4 p-4" type="button" @click="emitIncrement">
+    count is: {{ count }}
+  </button>
   <p>
     Edit
     <code>components/HelloWorld.vue</code> to test hot module replacement.
@@ -40,6 +43,7 @@
 <script lang="ts">
 import { computed, defineComponent } from "vue"
 import { useStore } from "@/store"
+import { emitter } from "@/store/PubSub"
 
 export default defineComponent({
   name: "HelloWorld",
@@ -52,8 +56,8 @@ export default defineComponent({
   setup: () => {
     const store = useStore()
 
-    // typed as number
     return {
+      // typed as number
       count: computed(() => store.state.count),
 
       // access a mutation
@@ -61,6 +65,9 @@ export default defineComponent({
 
       // access an action
       asyncIncrement: () => store.dispatch("asyncIncrement", 1),
+
+      // emit global event
+      emitIncrement: () => emitter.emit("globalIncrement", 1),
     }
   },
   methods: {},

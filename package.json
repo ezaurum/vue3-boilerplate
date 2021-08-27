@@ -9,6 +9,7 @@
     "lint:style": "stylelint src/**/*.{css,scss,vue}"
   },
   "dependencies": {
+    "mitt": "^3.0.0",
     "sass": "^1.37.5",
     "vue": "^3.1.5",
     "vue-router": "^4.0.10",
