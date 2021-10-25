@@ -20,17 +20,20 @@ export default {}
 $headerHeight: 4rem;
 $footerHeight: 4rem;
 $navigationWidth: 10rem;
+
 main {
   @apply grid h-full w-full;
+
   grid-template-areas:
     "header header"
     "navigation content"
     "navigation footer";
-  grid-auto-rows: $headerHeight 1fr $footerHeight;
-  grid-auto-columns: $navigationWidth 1fr;
+  grid-auto-rows: $headerHeight auto $footerHeight;
+  grid-auto-columns: $navigationWidth auto;
 
   header {
     @apply border border-black;
+
     grid-area: header;
   }
 
@@ -40,11 +43,13 @@ main {
 
   nav {
     @apply border-r border-black;
+
     grid-area: navigation;
   }
 
   footer {
     @apply border-t border-black;
+
     grid-area: footer;
   }
 }
