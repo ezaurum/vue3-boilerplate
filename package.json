@@ -5,12 +5,8 @@
   "scripts": {
     "serve": "vite preview",
     "build": "vue-tsc --noEmit && vite build",
-    "build:participant": "vue-tsc --noEmit && VITE_BUILD_TARGET='participant' vite build",
-    "build:admin": "vue-tsc --noEmit && VITE_BUILD_TARGET='admin' vite build",
     "test:unit": "mocha --ui bdd",
     "dev": "vite --host",
-    "dev:participant": "VITE_BUILD_TARGET='participant' vite --host",
-    "dev:admin": "VITE_BUILD_TARGET='admin' vite --host",
     "lint:script": "eslint --ext .ts,vue,js,tsx,jsx --ignore-path .gitignore .",
     "lint:style": "stylelint src/**/*.{css,scss,vue}",
     "storybook": "start-storybook -p 6006",
