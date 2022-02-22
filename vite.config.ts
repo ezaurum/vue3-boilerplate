@@ -8,6 +8,7 @@ import {
   presetUno,
   presetWebFonts,
   transformerVariantGroup,
+  transformerDirectives,
 } from "unocss"
 
 export default defineConfig({
@@ -27,6 +28,7 @@ export default defineConfig({
         }),
         transformerVariantGroup(),
       ],
+      transformers: [transformerDirectives()],
     }),
   ],
   resolve: {

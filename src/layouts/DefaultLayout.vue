@@ -3,10 +3,10 @@
     <header role="group">
       <router-view name="state"></router-view>
     </header>
-    <nav role="navigation">
+    <nav class="border-r border-red" role="navigation">
       <router-view name="navigation"></router-view>
     </nav>
-    <section role="main">
+    <section border-t border-black role="main">
       <router-view />
     </section>
     <footer role="group"></footer>
@@ -42,14 +42,10 @@ main {
   }
 
   nav {
-    @apply border-r border-black;
-
     grid-area: navigation;
   }
 
   footer {
-    @apply border-t border-black;
-
     grid-area: footer;
   }
 }
