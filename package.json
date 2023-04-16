@@ -15,7 +15,6 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@typeform/embed": "^2.9.2",
     "@vueuse/core": "^9.13.0",
     "animate.css": "^4.1.1",
     "cox-postposition": "^1.4.1",
