@@ -1,21 +1,34 @@
 module.exports = {
-  root: true,
   env: {
     browser: true,
     es2021: true,
     node: true,
   },
   extends: [
-    "plugin:vue/vue3-recommended",
     "eslint:recommended",
-    "@vue/typescript/recommended",
-    "prettier",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:vue/essential",
+    "plugin:vue/vue3-recommended",
+    "plugin:storybook/recommended",
+    "plugin:prettier/recommended",
   ],
+  plugins: ["@typescript-eslint"],
+  overrides: [],
+  parser: "vue-eslint-parser",
   parserOptions: {
-    ecmaVersion: 2021,
+    parser: "@typescript-eslint/parser",
+    ecmaVersion: "latest",
+    sourceType: "module",
+    ecmaFeatures: {
+      jsx: true,
+    },
   },
-  plugins: ["prettier"],
   rules: {
     "prettier/prettier": "error",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "no-empty-function": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "vue/no-multiple-template-root": "off",
+    "vue/no-v-model-argument": "off",
   },
 }

@@ -1,14 +1,12 @@
+**/*.md
+/storybook-static/
+/dist/
+/src/assets/scss/form.scss
+
 .DS_Store
 node_modules
-/dist/
-/storybook-static/
 .pnp.*
 .yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
 
 # local env files
 .env.local
@@ -33,3 +31,7 @@ pnpm-debug.log*
 *.*~
 
 stats.html
+*.png
+*.jpg
+*.ts
+*.js

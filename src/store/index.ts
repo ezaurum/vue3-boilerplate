@@ -1,29 +1,16 @@
-// https://next.vuex.vuejs.org/guide/typescript-support.html#typing-store-property-in-vue-component
-import { InjectionKey, State } from "vue"
-import { createStore, Store, useStore as baseUseStore } from "vuex"
+import { defineStore } from "pinia"
 
-// define injection key
-export const key: InjectionKey<Store<State>> = Symbol()
-
-export const store = createStore<State>({
-  state: {
+export const useStore = defineStore("main", {
+  state: () => ({
     count: 0,
-  },
-  mutations: {
-    increment(state, v) {
-      state.count += v
-    },
-  },
+  }),
   actions: {
-    asyncIncrement({ commit }, v) {
-      setTimeout(() => {
-        commit("increment", v)
-      }, 1000)
+    increment(v: number) {
+      this.count += v
+    },
+    async incrementAsync(v: number) {
+      await new Promise((resolve) => setTimeout(resolve, 400))
+      this.increment(v)
     },
   },
 })
-
-// define your own `useStore` composition function
-export function useStore(): Store<State> {
-  return baseUseStore<State>(key)
-}

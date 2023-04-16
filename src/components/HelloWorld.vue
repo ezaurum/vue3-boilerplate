@@ -1,5 +1,5 @@
 <template>
-  <h1>{{ $t("message.hello") }}</h1>
+  <h1 class="p-2 border bg-gray-500 text-white hover:text-gray-50 hover:bg-green-300">{{ $t("message.hello") }}</h1>
   <p>
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
@@ -47,7 +47,6 @@ import { useStore } from "@/store"
 import { emitter } from "@/store/PubSub"
 
 export default defineComponent({
-  name: "HelloWorld",
   props: {
     msg: {
       type: String,
@@ -59,13 +58,13 @@ export default defineComponent({
 
     return {
       // typed as number
-      count: computed(() => store.state.count),
+      count: computed(() => store.count),
 
       // access a mutation
-      increment: () => store.commit("increment", 1),
+      increment: () => store.increment(1),
 
       // access an action
-      asyncIncrement: () => store.dispatch("asyncIncrement", 1),
+      asyncIncrement: () => store.incrementAsync(1),
 
       // emit global event
       emitIncrement: () => emitter.emit("globalIncrement", 1),

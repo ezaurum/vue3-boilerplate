@@ -1,6 +1,6 @@
 // global emitter
 import mitt from "mitt"
-import { store } from "@/store"
+import { useStore } from "@/store"
 
 type Events = {
   // key : event value
@@ -11,5 +11,6 @@ export const emitter = mitt<Events>()
 
 // handler global event
 emitter.on("globalIncrement", (value) => {
-  store.commit("increment", value)
+  const store = useStore()
+  store.increment(value)
 })

@@ -1,9 +1,9 @@
 import { createApp } from "vue"
-import { key, store } from "@/store"
 import router from "@/router"
 import "@/assets/tailwind.css"
 import { createI18n } from "vue-i18n"
 import App from "./App.vue"
+import {createPinia} from "pinia";
 
 const i18n = createI18n({
   locale: "ko",
@@ -29,9 +29,8 @@ const i18n = createI18n({
 
 const app = createApp(App)
 
-// pass the injection key
-app.use(store, key)
 app.use(router)
 app.use(i18n)
+app.use(createPinia())
 
 app.mount("#app")
