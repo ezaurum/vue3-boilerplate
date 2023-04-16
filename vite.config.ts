@@ -18,11 +18,6 @@ export default defineConfig({
     },
   },
   build: {
-    rollupOptions: {
-      input: {
-        console: resolve(__dirname, "entries/console/index.html"),
-        participant: resolve(__dirname, "entries/participant/index.html"),
-      },
-    },
+    rollupOptions: {},
   },
 })
