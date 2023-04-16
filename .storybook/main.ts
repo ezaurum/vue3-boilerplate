@@ -1,11 +1,12 @@
 import type { StorybookConfig } from "@storybook/vue3-vite"
-const config: StorybookConfig = {
+export default {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
   ],
+  staticDirs: ["../public"],
   framework: {
     name: "@storybook/vue3-vite",
     options: {},
@@ -13,5 +14,10 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
-}
-export default config
+  features: {
+    storyStoreV7: true,
+  },
+  async babel(options: any) {
+    return { presets: ["@babel/preset-env", "@babel/preset-typescript"] }
+  },
+} as StorybookConfig
