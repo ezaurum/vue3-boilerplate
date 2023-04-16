@@ -19,3 +19,10 @@ yarn dev
 ```bash
 npm run dev
 ```
+
+# 문제
+## Storybook 7.0.5 에서 실행이 안 된다면
+```shell
+rm ~/.pnp.js
+```
+[참고](https://github.com/storybookjs/storybook/issues/20876)
