@@ -1,18 +1,21 @@
-# Vue 3 + Typescript + Vite + Vuex + Router + Tailwindcss
+# Vue 3 + Vite
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. Typescript/Vite 환경에서 개발가능한 Vue3
-템플릿
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-* SCSS
-* Lint/Prettier
-* Commit hook
+## Recommended IDE Setup
 
-# 실행
+- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-```bash
-yarn dev
-```
+## Tools
 
-```bash
-npm run dev
-```
+- [Pinia](https://pinia.vuejs.org/) - Global Store
+- [Vue Router](https://next.router.vuejs.org/) - Routing
+- [Vue I18n](https://next.router.vuejs.org/) - Internationalization
+- [TailwindCSS](https://tailwindcss.com/) - CSS
+- [Storybook](https://storybook.js.org/) - Component Storybook
+- Linting
+  - [ESLint](https://eslint.org/) - Linting
+  - [Prettier](https://prettier.io/) - Code Formatter
+  - [Stylelint](https://stylelint.io/) - CSS Linting
+  - [Husky](https://typicode.github.io/husky/#/) - Git Hooks
+  - [PNPM](https://pnpm.io/) - Package Manager
