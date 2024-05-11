@@ -1,6 +1,6 @@
 {
-  "name": "congkong-admin",
-  "version": "3.0.1",
+  "name": "vue boilerplate",
+  "version": "0.0.1",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
@@ -13,7 +13,8 @@
     "storybook": "storybook dev -p 9006",
     "build-storybook": "storybook build",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "prepare": "husky"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
