@@ -15,7 +15,6 @@ export default {
     autodocs: "tag",
   },
   features: {
-    storyStoreV7: true,
   },
   async babel(options: any) {
     return { presets: ["@babel/preset-env", "@babel/preset-typescript"] }

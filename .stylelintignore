@@ -35,3 +35,7 @@ stats.html
 *.jpg
 *.ts
 *.js
+*.svg
+*.mdx
+*.json
+pnpm-lock.yaml

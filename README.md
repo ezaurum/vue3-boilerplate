@@ -1,4 +1,4 @@
-# Vue 3 + Typescript + Vite + Vuex + Router + Tailwindcss
+# Vue 3 + Typescript + Vite + Pinia + Router + Tailwindcss
 
 This template should help get you started developing with Vue 3 and Typescript in Vite. Typescript/Vite 환경에서 개발가능한 Vue3
 템플릿
@@ -14,10 +14,15 @@ This template should help get you started developing with Vue 3 and Typescript i
 
 ```bash
 yarn dev
+pnpm dev
 ```
 
 ```bash
 npm run dev
+```
+
+```bash
+pnpm dev
 ```
 
 # 문제
