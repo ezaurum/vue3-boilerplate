@@ -14,9 +14,15 @@ export default {
   docs: {
     autodocs: "tag",
   },
-  features: {
-  },
+  features: {},
   async babel(options: any) {
     return { presets: ["@babel/preset-env", "@babel/preset-typescript"] }
+  },
+  viteFinal: (config: any) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "@": require("path").resolve(__dirname, "../src"),
+    }
+    return config
   },
 } as StorybookConfig
