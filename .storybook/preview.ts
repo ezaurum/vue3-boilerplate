@@ -14,3 +14,9 @@ const preview: Preview = {
 }
 
 export default preview
+
+export const decorators = [
+  () => ({
+    template: "<div style='padding: 2rem'><story /></div>",
+  }),
+]
