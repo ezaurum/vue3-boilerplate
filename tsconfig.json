@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsxImportSource": "vue",
     "target": "ESNext",
     "module": "esnext",
     "moduleResolution": "node",
@@ -35,7 +36,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["vite", "node", "vue"]
+    "types": ["vite", "node", "vue", "vitest/globals"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
   "exclude": ["**/*.spec.ts", "**/*.mdx", "**/*.stories.*", "**/stories/**/*"]

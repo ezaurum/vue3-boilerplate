@@ -1,4 +1,4 @@
-import MyHeader from "./Header.vue";
+import MyHeader from "./Header.vue"
 
 export default {
   title: "Example/Header",
@@ -15,7 +15,7 @@ export default {
       // Story args can be spread into the returned object
       return {
         ...args,
-      };
+      }
     },
     // Then, the spread values can be accessed directly in the template
     template: '<my-header :user="user" />',
@@ -24,7 +24,7 @@ export default {
     // More on how to position stories at: https://storybook.js.org/docs/vue/configure/story-layout
     layout: "fullscreen",
   },
-};
+}
 
 export const LoggedIn = {
   args: {
@@ -32,10 +32,10 @@ export const LoggedIn = {
       name: "Jane Doe",
     },
   },
-};
+}
 
 export const LoggedOut = {
   args: {
     user: null,
   },
-};
+}

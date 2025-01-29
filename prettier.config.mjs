@@ -1,4 +1,8 @@
-module.exports = {
+/**
+ * @see https://prettier.io/docs/en/configuration.html
+ * @type {import("prettier").Config}
+ */
+export default {
   bracketSpacing: true,
   htmlWhitespaceSensitivity: "css",
   jsxBracketSameLine: false,

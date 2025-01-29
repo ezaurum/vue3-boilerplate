@@ -1,5 +1,9 @@
 {
-  "extends": ["stylelint-config-standard-scss", "stylelint-config-recommended-vue", "stylelint-prettier/recommended"],
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended-vue",
+    "stylelint-prettier/recommended"
+  ],
   "rules": {
     "prettier/prettier": true,
     "property-no-unknown": [
@@ -39,6 +43,6 @@
       }
     ],
     "block-no-empty": null,
-    "selector-class-pattern": null
+    "font-family-no-missing-generic-family-keyword": null
   }
 }

@@ -26,7 +26,6 @@ const messages = import.meta.glob(
   { eager: true }
 )
 Object.values(messages).forEach((m) => {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   loadLocaleMessages(m.default)
 })

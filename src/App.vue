@@ -1,6 +1,10 @@
 <template>
   <div class="p-2">APP</div>
-  <p class="text-2xl flex justify-center items-center animate__animated animate__heartBeat animate__infinite">{{ store.app.name }}</p>
+  <p
+    class="text-2xl flex justify-center items-center animate__animated animate__heartBeat animate__infinite"
+  >
+    {{ store.app.name }}
+  </p>
   <main>
     {{ t("cancel") }}
     <p>{{ t("confirm") }}</p>
@@ -8,10 +12,10 @@
 </template>
 
 <script lang="ts" setup>
-import { t } from "@/i18n";
-import { useStore } from "@/store";
+import { t } from "@/i18n"
+import { useStore } from "@/store"
 
-const store = useStore();
+const store = useStore()
 </script>
 
 <style lang="scss" scoped>
