@@ -3,11 +3,13 @@ import vue from "@vitejs/plugin-vue"
 import { resolve } from "path"
 import vueJsxPlugin from "@vitejs/plugin-vue-jsx"
 //import { VitePWA } from "vite-plugin-pwa"
+import tailwindcss from "@tailwindcss/vite"
 
 export default defineConfig({
   plugins: [
     vue(),
     vueJsxPlugin(),
+    tailwindcss(),
     /* VitePWA({
       registerType: "autoUpdate",
       strategies: "injectManifest",
