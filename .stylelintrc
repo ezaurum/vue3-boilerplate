@@ -43,6 +43,12 @@
       }
     ],
     "block-no-empty": null,
-    "font-family-no-missing-generic-family-keyword": null
+    "font-family-no-missing-generic-family-keyword": null,
+    "selector-class-pattern": [
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*(--[a-z0-9]+)*$",
+      {
+        "message": "Selector class names should be kebab-case and follow BEM conventions."
+      }
+    ]
   }
 }

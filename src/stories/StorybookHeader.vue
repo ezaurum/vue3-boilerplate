@@ -26,49 +26,43 @@
         <h1>Acme</h1>
       </div>
       <div>
-        <span v-if="user" class="welcome"
+        <span class="welcome" v-if="user"
           >Welcome, <b>{{ user.name }}</b
           >!</span
         >
         <my-button
-          v-if="user"
           size="small"
-          label="Log out"
           @click="$emit('logout')"
+          label="Log out"
+          v-if="user"
         />
         <my-button
-          v-if="!user"
           size="small"
-          label="Log in"
           @click="$emit('login')"
+          label="Log in"
+          v-if="!user"
         />
         <my-button
-          v-if="!user"
           primary
           size="small"
-          label="Sign up"
           @click="$emit('createAccount')"
+          label="Sign up"
+          v-if="!user"
         />
       </div>
     </div>
   </header>
 </template>
 
-<script>
+<script lang="ts" setup>
+import MyButton from "./StorybookButton.vue"
 import "./header.css"
-import MyButton from "./Button.vue"
 
-export default {
-  name: "MyHeader",
+defineProps<{ user: { name: string } | null }>()
 
-  components: { MyButton },
-
-  props: {
-    user: {
-      type: Object,
-    },
-  },
-
-  emits: ["login", "logout", "createAccount"],
-}
+defineEmits<{
+  (event: "createAccount"): void
+  (event: "login"): void
+  (event: "logout"): void
+}>()
 </script>

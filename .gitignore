@@ -33,3 +33,5 @@ pnpm-debug.log*
 *.*~
 
 stats.html
+
+*storybook.log
