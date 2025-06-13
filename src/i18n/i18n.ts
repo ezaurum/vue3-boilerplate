@@ -1,6 +1,7 @@
 import postposition from "cox-postposition"
+import { LocaleSchema } from "vue-i18n"
 
-export default {
+const i18n: LocaleSchema = {
   ko: {
     confirm: "확인",
     cancel: "취소",
@@ -42,3 +43,5 @@ export default {
     },
   },
 }
+
+export default i18n

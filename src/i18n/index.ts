@@ -1,4 +1,4 @@
-import { createI18n, LocaleMessageDictionary, VueMessageType } from "vue-i18n"
+import { createI18n, DefaultLocaleMessageSchema } from "vue-i18n"
 
 const instance = createI18n({
   locale: "ko",
@@ -7,26 +7,21 @@ const instance = createI18n({
   messages: {},
 })
 
-export const loadLocaleMessages = (
-  messages: Record<string, LocaleMessageDictionary<VueMessageType>>
-) => {
+export const loadLocaleMessages = (messages: DefaultLocaleMessageSchema) => {
   Object.entries(messages).forEach((entry) => {
     const [key, value] = entry
-    instance.global.mergeLocaleMessage(
-      key,
-      value as LocaleMessageDictionary<VueMessageType>
-    )
+    instance.global.mergeLocaleMessage(key, value)
   })
 }
 
 // i18n 로드
 // https://vitejs.dev/guide/features.html#glob-import
 const messages = import.meta.glob(
-  ["/src/**/*-i18n.(j|t)s", "/src/**/i18n.(j|t)s"],
+  ["/src/**/*(-|.)i18n.(j|t)s", "/src/**/i18n.(j|t)s"],
   { eager: true }
-)
+) as Record<string, { default: DefaultLocaleMessageSchema }>
+
 Object.values(messages).forEach((m) => {
-  // @ts-ignore
   loadLocaleMessages(m.default)
 })
 
