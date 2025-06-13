@@ -32,6 +32,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^4",
     "@eslint/js": "^9.28.0",
+    "@intlify/unplugin-vue-i18n": "^6.0.8",
     "@storybook/addon-a11y": "^9.0.9",
     "@storybook/addon-docs": "^9.0.9",
     "@storybook/addon-vitest": "^9.0.9",

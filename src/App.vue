@@ -8,12 +8,14 @@
   <main>
     {{ t("cancel") }}
     <p>{{ t("confirm") }}</p>
+    <HelloWorld></HelloWorld>
   </main>
 </template>
 
 <script lang="ts" setup>
 import { t } from "@/i18n"
 import { useStore } from "@/store"
+import HelloWorld from "@/components/HelloWorld.vue"
 
 const store = useStore()
 </script>

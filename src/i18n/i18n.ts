@@ -3,6 +3,7 @@ import { LocaleSchema } from "vue-i18n"
 
 const i18n: LocaleSchema = {
   ko: {
+    test: "ok { confirm } { cancel }",
     confirm: "확인",
     cancel: "취소",
     create: ({ named }) => `새 ${named("domain")} 만들기`,

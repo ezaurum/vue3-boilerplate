@@ -4,12 +4,16 @@ import { resolve } from "path"
 import vueJsxPlugin from "@vitejs/plugin-vue-jsx"
 //import { VitePWA } from "vite-plugin-pwa"
 import tailwindcss from "@tailwindcss/vite"
+import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite"
 
 export default defineConfig({
   plugins: [
     vue(),
     vueJsxPlugin(),
     tailwindcss(),
+    VueI18nPlugin({
+      /* options */
+    }),
     /* VitePWA({
       registerType: "autoUpdate",
       strategies: "injectManifest",
@@ -40,7 +44,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        api: "mordern",
+        api: "modern",
         additionalData: [],
       },
     },
