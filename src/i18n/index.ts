@@ -17,7 +17,7 @@ export const loadLocaleMessages = (messages: DefaultLocaleMessageSchema) => {
 // i18n 로드
 // https://vitejs.dev/guide/features.html#glob-import
 const messages = import.meta.glob(
-  ["/src/**/*(-|.)i18n.(j|t)s", "/src/**/i18n.(j|t)s"],
+  ["/src/**/*.i18n.(j|t)s", "/src/**/i18n.(j|t)s", "/src/**/*-i18n.(j|t)s"],
   { eager: true }
 ) as Record<string, { default: DefaultLocaleMessageSchema }>
 
