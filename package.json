@@ -1,8 +1,7 @@
 {
-  "name": "vue-boilerplate",
-  "version": "0.0.1",
-  "license": "UNLICENSED",
-  "private": true,
+  "name": "vue3-boilerplate",
+  "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "serve": "vite preview",
     "build": "vue-tsc && vite build",
